@@ -15,6 +15,7 @@
 ## 📸 Screenshots
 
 ![EasySwitch Interface](https://github.com/SuryaGoud34/EasySwitch-Google/blob/main/image.png)
+
 *Clean and intuitive interface*
 
 
@@ -179,3 +180,4 @@ Made with ❤️ by [Surya](https://github.com/SuryaGoud34)
 
 
 </div>
+
