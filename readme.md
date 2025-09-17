@@ -14,7 +14,7 @@
 
 ## 📸 Screenshots
 
-![EasySwitch Interface](screenshots/image.png)
+![EasySwitch Interface](https://github.com/SuryaGoud34/EasySwitch-Google/blob/main/image.png)
 *Clean and intuitive interface*
 
 
@@ -176,5 +176,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **⭐ Star this repo if EasySwitch helps you!**
 
 Made with ❤️ by [Surya](https://github.com/SuryaGoud34)
+
 
 </div>
