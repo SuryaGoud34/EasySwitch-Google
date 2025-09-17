@@ -160,10 +160,6 @@ A: Try reloading the extension or reinstalling it. Report persistent issues on G
 - Ensure you're not in Incognito mode
 - Try restarting Chrome
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📞 Support
 
 - 🐛 **Bug reports**: [Open an issue](https://github.com/SuryaGoud34/easyswitch-google/issues)
@@ -180,4 +176,5 @@ Made with ❤️ by [Surya](https://github.com/SuryaGoud34)
 
 
 </div>
+
 
