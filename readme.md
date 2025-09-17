@@ -2,17 +2,17 @@
 
 **Easily switch between multiple Google and YouTube accounts with custom nicknames.**
 
-## ✨ Features
+##  Features
 
-- 🚀 **Quick Account Switching** - Switch between Google accounts in one click
-- 🏷️ **Custom Nicknames** - Give your accounts memorable names (Work Gmail, Personal YouTube, etc.)
-- 🔢 **Auto-Numbering** - Each account gets a unique number badge (#01, #02, #03...)
-- 🎯 **Smart URL Handling** - Works with all Google services (Gmail, Drive, Docs, YouTube, etc.)
-- 🔒 **Privacy First** - No data tracking, everything stored locally
-- 🎨 **Modern UI** - Clean, dark-themed interface
-- ⚡ **Lightweight** - Fast and efficient, no bloat
+-  **Quick Account Switching** - Switch between Google accounts in one click
+-  **Custom Nicknames** - Give your accounts memorable names (Work Gmail, Personal YouTube, etc.)
+-  **Auto-Numbering** - Each account gets a unique number badge (#01, #02, #03...)
+-  **Smart URL Handling** - Works with all Google services (Gmail, Drive, Docs, YouTube, etc.)
+-  **Privacy First** - No data tracking, everything stored locally
+-  **Modern UI** - Clean, dark-themed interface
+-  **Lightweight** - Fast and efficient, no bloat
 
-## 📸 Screenshots
+##  Screenshots
 
 ![EasySwitch Interface](https://github.com/SuryaGoud34/EasySwitch-Google/blob/main/image.png)
 
@@ -37,7 +37,7 @@
    - Select the downloaded folder
    - The extension icon will appear in your toolbar
 
-## 🎯 How to Use
+##  How to Use
 
 ### Setting Up Your Accounts
 
@@ -71,15 +71,15 @@ EasySwitch uses Google's native account switching mechanism:
 
 **No passwords or sensitive data are stored** - we only save the nicknames you create!
 
-## 🌐 Supported Sites
+##  Supported Sites
 
-- ✅ **Gmail** (gmail.com)
-- ✅ **Google Drive** (drive.google.com)
-- ✅ **Google Docs/Sheets/Slides** (docs.google.com, sheets.google.com, slides.google.com)
-- ✅ **YouTube** (youtube.com)
-- ✅ **Google Photos** (photos.google.com)
-- ✅ **Google Maps** (maps.google.com)
-- ✅ **All other Google services**
+-  **Gmail** (gmail.com)
+-  **Google Drive** (drive.google.com)
+-  **Google Docs/Sheets/Slides** (docs.google.com, sheets.google.com, slides.google.com)
+-  **YouTube** (youtube.com)
+-  **Google Photos** (photos.google.com)
+-  **Google Maps** (maps.google.com)
+-  **All other Google services**
 
 
 ### Local Development
@@ -94,14 +94,14 @@ EasySwitch uses Google's native account switching mechanism:
 3. **Create a ZIP file** of all extension files
 4. **Upload to Chrome Web Store**
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Here's how you can help:
 
-1. **🐛 Report bugs** by opening an issue
-2. **💡 Suggest features** in the discussions
-3. **🔧 Submit pull requests** with improvements
-4. **📖 Improve documentation**
+1. ** Report bugs** by opening an issue
+2. ** Suggest features** in the discussions
+3. ** Submit pull requests** with improvements
+4. ** Improve documentation**
 
 ### Development Guidelines
 - Follow the existing code style
@@ -109,16 +109,16 @@ We welcome contributions! Here's how you can help:
 - Ensure compatibility with Manifest V3
 - Add comments for complex logic
 
-## 📋 Changelog
+##  Changelog
 
 ### v1.0.0 (Current)
-- ✨ Initial release
-- 🔄 Account switching functionality
-- 🏷️ Custom nickname system
-- 🎨 Modern dark UI
-- 🔒 Local storage only
+-  Initial release
+-  Account switching functionality
+-  Custom nickname system
+-  Modern dark UI
+-  Local storage only
 
-## ❓ FAQ
+##  FAQ
 
 **Q: Is my data safe?**
 A: Yes! EasySwitch only stores account nicknames locally. No passwords, emails, or personal data are collected.
@@ -141,7 +141,7 @@ A: Currently, accounts are ordered by the sequence you added them. To reorder, y
 **Q: The extension stopped working after a Chrome update**
 A: Try reloading the extension or reinstalling it. Report persistent issues on GitHub.
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -160,11 +160,11 @@ A: Try reloading the extension or reinstalling it. Report persistent issues on G
 - Ensure you're not in Incognito mode
 - Try restarting Chrome
 
-## 📞 Support
+## Support
 
-- 🐛 **Bug reports**: [Open an issue](https://github.com/SuryaGoud34/easyswitch-google/issues)
-- 💡 **Feature requests**: [Start a discussion](https://github.com/SuryaGoud34/easyswitch-google/discussions)
-- 📧 **Contact**: [surya2k4@gmail.com](mailto:surya2k4@gmail.com)
+-  **Bug reports**: [Open an issue](https://github.com/SuryaGoud34/easyswitch-google/issues)
+-  **Feature requests**: [Start a discussion](https://github.com/SuryaGoud34/easyswitch-google/discussions)
+-  **Contact**: [surya2k4@gmail.com](mailto:surya2k4@gmail.com)
 
 ---
 
@@ -176,5 +176,6 @@ Made with ❤️ by [Surya](https://github.com/SuryaGoud34)
 
 
 </div>
+
 
 
