@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasySwitch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>EasySwitch</h1>
+    <p class="subtitle">Switch Google accounts seamlessly</p>
+  </header>
+
+  <div class="learn">
+    <button id="learnBtn" class="learn-btn">
+      <span>📚</span> Learn to switch accounts
+    </button>
+  </div>
+
+  <!-- Loading indicator -->
+  <div id="loadingIndicator" class="loading hidden">
+    <span class="spinner"></span> Loading accounts...
+  </div>
+
+  <!-- Error/Success message box -->
+  <div id="messageBox" class="message hidden" aria-live="polite"></div>
+
+  <!-- Accounts list -->
+  <div class="accounts-container">
+    <ul id="accountList" role="list"></ul>
+    <div id="emptyState" class="empty-state hidden">
+      <p>No accounts added yet</p>
+      <p class="hint">Click "Add Account" to get started</p>
+    </div>
+  </div>
+
+  <!-- Inline input for new/edit account -->
+  <div id="inputRow" class="input-container hidden">
+    <label for="accountNumberInput" class="input-label">Account Number</label>
+    <div class="input-group">
+      <input 
+        id="accountNumberInput" 
+        type="number" 
+        min="1" 
+        step="1" 
+        placeholder="example: 1 for first account " 
+        maxlength="2"
+        required
+      />
+    </div>
+    <label for="nicknameInput" class="input-label">Account Nickname</label>
+    <div class="input-group">
+      <input 
+        id="nicknameInput" 
+        type="text" 
+        placeholder="e.g. Work Gmail, Personal YouTube" 
+        maxlength="30"
+        required
+      />
+    </div>
+    <div class="button-group">
+      <button id="saveAccount" class="btn-primary" type="button">Save</button>
+      <button id="cancelAccount" class="btn-secondary" type="button">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Action buttons -->
+  <div class="action-buttons">
+    <button id="addAccount" class="btn-add">
+      <span>➕</span> Add Account
+    </button>
+    <button id="removeAccount" class="btn-remove hidden">
+      <span>🗑️</span> Remove Mode
+    </button>
+  </div>
+
+  <!-- Footer links -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#" id="helpLink" class="footer-link">Help</a>
+      <span class="separator">|</span>
+      <a href="#" id="githubLink" class="footer-link">GitHub</a>
+    </div>
+    <div class="version">v1.0.0</div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

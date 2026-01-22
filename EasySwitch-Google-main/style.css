@@ -1,0 +1,622 @@
+:root {
+  --bg: #1e1e1e;
+  --bg-secondary: #2b2b2b;
+  --surface: #282833;
+  --surface-hover: #323242;
+  --text-primary: #ffffff;
+  --text-secondary: #bfc3cf;
+  --text-muted: #8b8b8b;
+  --accent: #0b78d7;
+  --accent-hover: #0952a5;
+  --success: #2fa45a;
+  --success-hover: #238a48;
+  --danger: #d9534f;
+  --danger-hover: #c9302c;
+  --warning: #f0ad4e;
+  --border: #333333;
+  --border-light: #444444;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  width: 320px;
+  min-height: 400px;
+  max-height: 600px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Header */
+header {
+  background: var(--bg-secondary);
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+header .subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Learn section */
+.learn {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.learn-btn {
+  background: var(--success);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.learn-btn:hover {
+  background: var(--success-hover);
+  transform: translateY(-1px);
+}
+
+/* Loading indicator */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border);
+  border-top: 2px solid var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Message box (errors/success) */
+.message {
+  margin: 12px 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border-left: 4px solid;
+  display: none;
+}
+
+.message.error {
+  background: rgba(217, 83, 79, 0.1);
+  border-left-color: var(--danger);
+  color: #ffb3b3;
+}
+
+.message.success {
+  background: rgba(47, 164, 90, 0.1);
+  border-left-color: var(--success);
+  color: #b3ffcc;
+}
+
+/* Legacy error box support */
+#errorBox {
+  margin: 12px 16px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #ffb3b3;
+  background: rgba(217, 83, 79, 0.1);
+  border-left: 4px solid var(--danger);
+  border-radius: 6px;
+  display: none;
+}
+
+/* Accounts container */
+.accounts-container {
+  padding: 0 16px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+/* Account list */
+#accountList {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.account-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 10px;
+  margin-bottom: 6px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.account-row:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-light);
+}
+
+.account-info {
+  margin-bottom: 0;
+}
+
+/* Reduce extra spacing in input row */
+.input-container {
+  padding: 12px;
+}
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  margin-right: 12px;
+  gap: 10px;
+}
+
+.account-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(11, 120, 215, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  min-width: 28px;
+  text-align: center;
+}
+
+.nickname {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.nickname.recently-used {
+  color: var(--success);
+}
+
+.account-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.account-id,
+.last-used {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.account-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Legacy nick class support */
+.account-row .nick {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 24px 16px;
+  color: var(--text-muted);
+}
+
+.empty-state p {
+  margin: 0 0 8px 0;
+}
+
+.empty-state .hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Input container */
+.input-container {
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+/* Legacy input row support */
+#inputRow {
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+}
+
+#nicknameLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+/* Action buttons */
+.action-buttons {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-actions {
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Button styles */
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Button variants */
+.btn-primary,
+button.switch,
+button.switch-btn {
+  background: var(--accent);
+  color: var(--text-primary);
+}
+
+.btn-primary:hover,
+button.switch:hover,
+button.switch-btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary,
+button.cancel,
+.small.cancel {
+  background: var(--border-light);
+  color: var(--text-secondary);
+}
+
+.btn-secondary:hover,
+button.cancel:hover {
+  background: #555;
+}
+
+/* Minimal edit button styling */
+button.edit,
+button.edit-btn {
+  background: var(--border-light);
+  color: var(--text-secondary);
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+button.edit:hover,
+button.edit-btn:hover {
+  background: #4a4a4a;
+}
+
+.btn-danger,
+button.delete,
+button.delete-btn {
+  background: var(--danger);
+  color: var(--text-primary);
+}
+
+.btn-danger:hover,
+button.delete:hover,
+button.delete-btn:hover {
+  background: var(--danger-hover);
+}
+
+.btn-add,
+#addAccount {
+  background: var(--accent);
+  color: var(--text-primary);
+  width: 100%;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.btn-add:hover,
+#addAccount:hover {
+  background: var(--accent-hover);
+}
+
+.btn-remove,
+.remove-btn {
+  background: var(--danger);
+  color: var(--text-primary);
+  width: 100%;
+  padding: 10px 16px;
+  font-weight: 600;
+}
+
+.btn-remove:hover,
+.remove-btn:hover {
+  background: var(--danger-hover);
+}
+
+.btn-remove.active {
+  background: var(--success);
+}
+
+.btn-remove.active:hover {
+  background: var(--success-hover);
+}
+
+/* Small buttons */
+.small {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* Footer */
+.footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.separator {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.version {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Legacy bottom links and donation */
+.bottom-links {
+  text-align: center;
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+.bottom-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 4px;
+}
+
+.bottom-links a:hover {
+  text-decoration: underline;
+}
+
+.donation {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.donation button {
+  background: var(--accent);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.donation button:hover {
+  background: var(--accent-hover);
+}
+
+/* Scrollbar styling */
+.accounts-container::-webkit-scrollbar,
+#accountList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.accounts-container::-webkit-scrollbar-track,
+#accountList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.accounts-container::-webkit-scrollbar-thumb,
+#accountList::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 3px;
+}
+
+.accounts-container::-webkit-scrollbar-thumb:hover,
+#accountList::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.account-row {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Focus styles */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-height: 500px) {
+  .accounts-container {
+    max-height: 200px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #666;
+    --text-secondary: #ccc;
+  }
+}
