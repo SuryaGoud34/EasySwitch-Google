@@ -163,9 +163,9 @@ header .subtitle {
 .account-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  padding: 10px;
+  margin-bottom: 6px;
   background: var(--surface);
   border-radius: 8px;
   border: 1px solid transparent;
@@ -178,6 +178,13 @@ header .subtitle {
 }
 
 .account-info {
+  margin-bottom: 0;
+}
+
+/* Reduce extra spacing in input row */
+.input-container {
+  padding: 12px;
+}
   display: flex;
   align-items: center;
   flex: 1;
@@ -402,6 +409,20 @@ button.cancel,
 .btn-secondary:hover,
 button.cancel:hover {
   background: #555;
+}
+
+/* Minimal edit button styling */
+button.edit,
+button.edit-btn {
+  background: var(--border-light);
+  color: var(--text-secondary);
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+button.edit:hover,
+button.edit-btn:hover {
+  background: #4a4a4a;
 }
 
 .btn-danger,
