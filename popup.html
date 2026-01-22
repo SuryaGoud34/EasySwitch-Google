@@ -35,11 +35,21 @@
     </div>
   </div>
 
-  <!-- Inline input for new account -->
+  <!-- Inline input for new/edit account -->
   <div id="inputRow" class="input-container hidden">
-    <label for="nicknameInput" class="input-label">
-      Account nickname
-    </label>
+    <label for="accountNumberInput" class="input-label">Account Number</label>
+    <div class="input-group">
+      <input 
+        id="accountNumberInput" 
+        type="number" 
+        min="1" 
+        step="1" 
+        placeholder="example: 1 for first account " 
+        maxlength="2"
+        required
+      />
+    </div>
+    <label for="nicknameInput" class="input-label">Account Nickname</label>
     <div class="input-group">
       <input 
         id="nicknameInput" 
@@ -48,14 +58,10 @@
         maxlength="30"
         required
       />
-      <div class="button-group">
-        <button id="saveAccount" class="btn-primary" type="button">
-          Save
-        </button>
-        <button id="cancelAccount" class="btn-secondary" type="button">
-          Cancel
-        </button>
-      </div>
+    </div>
+    <div class="button-group">
+      <button id="saveAccount" class="btn-primary" type="button">Save</button>
+      <button id="cancelAccount" class="btn-secondary" type="button">Cancel</button>
     </div>
   </div>
 
@@ -75,8 +81,6 @@
       <a href="#" id="helpLink" class="footer-link">Help</a>
       <span class="separator">|</span>
       <a href="#" id="githubLink" class="footer-link">GitHub</a>
-      <span class="separator">|</span>
-      <a href="#" id="donateLink" class="footer-link">💖 Support</a>
     </div>
     <div class="version">v1.0.0</div>
   </footer>
