@@ -103,10 +103,10 @@ EasySwitch uses Google's native account switching mechanism:
 
 We welcome contributions! Here's how you can help:
 
-1. ** Report bugs** by opening an issue
-2. ** Suggest features** in the discussions
-3. ** Submit pull requests** with improvements
-4. ** Improve documentation**
+1. * Report bugs* by opening an issue
+2. * Suggest features* in the discussions
+3. * Submit pull requests* with improvements
+4. * Improve documentation*
 
 ### Development Guidelines
 - Follow the existing code style
@@ -181,6 +181,7 @@ Made with ❤️ by [Surya](https://github.com/SuryaGoud34)
 
 
 </div>
+
 
 
 
