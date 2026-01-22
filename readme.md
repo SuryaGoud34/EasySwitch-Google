@@ -41,26 +41,31 @@
 
 ### Setting Up Your Accounts
 
-1. **Click the EasySwitch icon** in your Chrome toolbar
-2. **Click "Add Account"** to register your first account
-3. **Enter a nickname** when prompted "Account nickname for 1st account" (e.g., "Work Gmail", "Personal YouTube")
-4. Your account will appear as **#01 Work Gmail** in the list
-5. **Repeat** for all your Google accounts - each new account gets the next number (#02, #03, etc.)
+1. **Click the EasySwitch icon** in your Chrome toolbar.
+2. **Click "Add Account"** to open the inline account form.
+3. **Enter an Account Number** (positive integer):
+   - Use 1 for your primary account 
+   - Only positive integers are allowed; the extension will show an error for 0, negative, or empty values.
+4. **Enter a Nickname** (e.g., "Work Gmail", "Personal YouTube").
+5. **Click Save** — the account is stored
+6. **Repeat** to register additional accounts.
 
 ### Switching Accounts
 
-1. **Visit any Google service** (Gmail, YouTube, Drive, etc.)
-2. **Click the EasySwitch icon**
-3. **Click "Switch"** next to the account you want to use
-4. **Done!** You'll be switched to that account instantly
+1. **Open any Google service** (Gmail, Drive, YouTube, Docs, etc.).
+2. **Click the EasySwitch icon** in the toolbar.
+3. **Click "Switch"** next to the account you want to use — EasySwitch will modify the URL 
+4. **Note:** If the popup is opened on a non-Google page (for example, GitHub), the popup will show a friendly message: **"Account switching works only on Google-owned websites."** The extension will not attempt to switch accounts on non-Google domains.
 
 ### Managing Accounts
 
-- **Add accounts**: Click the "Add Account" button and enter a nickname
-- **Account numbering**: Your first account becomes #01, second becomes #02, and so on
-- **Remove accounts**: Click "Remove Mode" then delete unwanted accounts
-- **Organized display**: Each account shows with its number badge and custom nickname
-- **Edit nicknames**: Delete and re-add with a new nickname (keeps the same number position)
+- **Normal Mode**: The popup shows a single **Switch** button for fast switching.
+- **Remove Mode**: Click **Remove Mode** to enter management mode — this reveals **Edit** and **Delete** buttons for each account.
+  - **Edit** opens the inline form and pre-fills the Account Number and Nickname so you can update both values. Changes are saved immediately to local storage and reflected in the UI.
+  - **Delete** removes only the selected account; remaining accounts' numbering updates automatically (no page reload required).
+- **Validation & Uniqueness**: The extension prevents duplicate account numbers and duplicate nicknames to avoid conflicts.
+
+If you'd like, add a short GIF demonstrating add/edit/delete to this section for clarity.
 
 ## 🔧 How It Works
 
@@ -176,6 +181,5 @@ Made with ❤️ by [Surya](https://github.com/SuryaGoud34)
 
 
 </div>
-
 
 
